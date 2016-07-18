@@ -28,6 +28,32 @@ NumpadAdd::
   send {LCtrl down}{LWin down}{Right}{LWin up}{LCtrl up}
 return
 
+#ifWinActive, Edge
+Numpad1::
+  send {LAlt down}{Left}{LAlt up}
+return
+Numpad2::
+  send {LCtrl down}{t}{LCtrl up}
+return
+Numpad3::
+  send {LAlt down}{Right}{LAlt up}
+return
+Numpad4::
+  send {LCtrl down}{LShift down}{Tab}{LShift up}{LCtrl up}
+return
+Numpad5::
+  send {LCtrl down}{w}{LCtrl up}
+return
+Numpad6::
+  send {LCtrl down}{Tab}{LCtrl up}
+return
+Numpad7::
+  send {LCtrl down}{r}{LCtrl up}
+return
+Numpad9::
+  send {LCtrl down}{LShift down}{t}{LShift up}{LCtrl up}
+return
+
 #ifWinActive, Opera
 Numpad1::
   send {LAlt down}{Left}{LAlt up}
@@ -46,4 +72,10 @@ Numpad5::
 return
 Numpad6::
   send {LCtrl down}{Tab}{LCtrl up}
+return
+Numpad7::
+  send {LCtrl down}{r}{LCtrl up}
+return
+Numpad9::
+  send {LCtrl down}{LShift down}{t}{LShift up}{LCtrl up}
 return
