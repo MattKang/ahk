@@ -28,6 +28,15 @@ NumpadAdd::
   send {LCtrl down}{LWin down}{Right}{LWin up}{LCtrl up}
 return
 
+; Zoom
+XButton1::
+  send {LCtrl down}{-}{LCtrl Up}
+return
+XButton2::
+  send {LCtrl down}{=}{LCtrl Up}
+return
+
+
 #ifWinActive, Edge
 Numpad1::
   send {LAlt down}{Left}{LAlt up}
