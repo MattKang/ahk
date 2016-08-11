@@ -36,6 +36,17 @@ XButton2::
   send {LCtrl down}{=}{LCtrl Up}
 return
 
+#ifWinActive, ahk_class CabinetWClass
+Numpad1::
+  send {LAlt down}{Left}{LAlt up}
+return
+Numpad2::
+  send {LAlt down}{Up}{LAlt up}
+return
+Numpad3::
+  send {LAlt down}{Right}{LAlt up}
+return
+
 
 #ifWinActive, Edge
 Numpad1::
