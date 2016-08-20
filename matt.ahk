@@ -17,6 +17,8 @@ Return
 ; Expose with Left+Rightclick
 ~LButton & RButton::
 ~RButton & LButton::
+  KeyWait LButton
+  KeyWait RButton
   send {LWin down}{Tab}{LWin up}
 return
 
