@@ -47,6 +47,34 @@ Numpad3::
   send {LAlt down}{Right}{LAlt up}
 return
 
+#ifWinActive, Atom
+Numpad1::
+  send {LCtrl down}{k}{LCtrl up}
+  send {LCtrl down}{p}{LCtrl up}
+return
+Numpad2::
+  send {LCtrl down}{k}{LCtrl up}
+  send {Right}
+return
+Numpad3::
+  send {LCtrl down}{k}{LCtrl up}
+  send {LCtrl down}{n}{LCtrl up}
+return
+Numpad4::
+  send {LCtrl down}{PgUp}{LCtrl up}
+return
+Numpad5::
+  send {LCtrl down}{w}{LCtrl up}
+return
+Numpad6::
+  send {LCtrl down}{PgDn}{LCtrl up}
+return
+Numpad7::
+  send {LCtrl down}{,}{LCtrl up}
+return
+Numpad9::
+  send {LCtrl down}{LShift down}{t}{LShift up}{LCtrl up}
+return
 
 #ifWinActive, Edge
 Numpad1::
