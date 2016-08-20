@@ -96,7 +96,7 @@ Numpad6::
   send {LCtrl down}{PgDn}{LCtrl up}
 return
 Numpad7::
-  send {LCtrl down}{,}{LCtrl up}
+  send {LCtrl down}{\}{LCtrl up}
 return
 Numpad9::
   send {LCtrl down}{LShift down}{t}{LShift up}{LCtrl up}
