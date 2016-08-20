@@ -22,6 +22,14 @@ Return
   send {LWin down}{Tab}{LWin up}
 return
 
+; Horizontal scroll
+NumpadSub & WheelUp::
+  send {WheelLeft}
+return
+NumpadSub & WheelDown::
+  send {WheelRight}
+return
+
 ; Switch desktops
 Numpad0::
   send {LCtrl down}{LWin down}{Left}{LWin up}{LCtrl up}
