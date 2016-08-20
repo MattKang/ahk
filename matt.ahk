@@ -30,6 +30,21 @@ NumpadSub & WheelDown::
   send {WheelRight}
 return
 
+; Snap windows
+NumpadSub & LButton::
+  send {LWin down}{Left}{LWin up}
+return
+NumpadSub & RButton::
+  send {LWin down}{Right}{LWin up}
+return
+NumpadSub & XButton1::
+  KeyWait XButton1
+  send {LWin down}{Down}{LWin Up}
+return
+NumpadSub & XButton2::
+  send {LWin down}{Up}{LWin Up}
+return
+
 ; Switch desktops
 Numpad0::
   send {LCtrl down}{LWin down}{Left}{LWin up}{LCtrl up}
@@ -46,6 +61,7 @@ XButton2::
   send {LCtrl down}{=}{LCtrl Up}
 return
 
+; Application specific
 #ifWinActive, ahk_class CabinetWClass
 Numpad1::
   send {LAlt down}{Left}{LAlt up}
