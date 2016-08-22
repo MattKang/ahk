@@ -14,11 +14,8 @@ SetTitleMatchMode, 2 ; window string matching, subset
     Click Middle
 Return
 
-; Expose with Left+Rightclick
-~LButton & RButton::
-~RButton & LButton::
-  KeyWait LButton
-  KeyWait RButton
+; Task View
+Numpad8::
   send {LWin down}{Tab}{LWin up}
 return
 
