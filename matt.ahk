@@ -55,10 +55,13 @@ return
 
 ; Zoom
 XButton1::
-  send {LCtrl down}{-}{LCtrl Up}
+  send {LCtrl down}{-}{LCtrl up}
 return
 XButton2::
-  send {LCtrl down}{=}{LCtrl Up}
+  send {LCtrl down}{=}{LCtrl up}
+return
+XButton1 & XButton2::
+  send {LCtrl down}{0}{LCtrl up}
 return
 
 ; Application specific
