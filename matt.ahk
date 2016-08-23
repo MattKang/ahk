@@ -128,6 +128,23 @@ Numpad9::
   send {LCtrl down}{LShift down}{t}{LShift up}{LCtrl up}
 return
 
+#ifWinActive, MATLAB
+Numpad1::
+  send {LCtrl down}{LShift down}{Tab}{LShift up}{LCtrl up}
+return
+Numpad3::
+  send {LCtrl down}{Tab}{LCtrl up}
+return
+Numpad4::
+  send {LCtrl down}{PgUp}{LCtrl up}
+return
+Numpad5::
+  send {LCtrl down}{w}{LCtrl up}
+return
+Numpad6::
+  send {LCtrl down}{PgDn}{LCtrl up}
+return
+
 #ifWinActive, Opera
 Numpad1::
   send {LAlt down}{Left}{LAlt up}
