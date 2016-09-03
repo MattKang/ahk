@@ -82,7 +82,7 @@ return
 XButton2 & LButton::
   send {LCtrl down}{PgUp}{LCtrl up}
 return
-XButton2 & RButton::
+XButton2 & RButton up::
   send {LCtrl down}{PgDn}{LCtrl up}
 return
 XButton2 & MButton::
@@ -112,7 +112,7 @@ return
 XButton2 & LButton::
   send {LCtrl down}{LShift down}{Tab}{LShift up}{LCtrl up}
 return
-XButton2 & RButton::
+XButton2 & RButton up::
   send {LCtrl down}{Tab}{LCtrl up}
 return
 XButton2 & MButton::
@@ -135,7 +135,7 @@ return
 XButton2 & LButton::
   send {LCtrl down}{PgUp}{LCtrl up}
 return
-XButton2 & RButton::
+XButton2 & RButton up::
   send {LCtrl down}{PgDn}{LCtrl up}
 return
 
@@ -159,7 +159,7 @@ return
 XButton2 & LButton::
   send {LCtrl down}{LShift down}{Tab}{LShift up}{LCtrl up}
 return
-XButton2 & RButton::
+XButton2 & RButton up::
   send {LCtrl down}{Tab}{LCtrl up}
 return
 XButton2 & MButton::
