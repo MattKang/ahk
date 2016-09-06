@@ -9,6 +9,9 @@ SetTitleMatchMode, 2 ; window string matching, subset
 #Persistent
 #SingleInstance Force
 
+; Variables
+HotkeyTriggered := false ; ensures multiple gestures don't trigger simultaneously
+
 ; Capture the 3 finger click which is sent to Windows as Left windows + Shift + Ctrl + F22
 #^+F22::
     Click Middle
@@ -30,16 +33,24 @@ XButton1 & WheelDown::
   send {LWin down}{Down}{LWin Up}
 return
 XButton1 & LButton up::
-  if GetKeyState("RButton","p")
+  if GetKeyState("RButton","p") {
     send {LCtrl down}{LWin down}{Right}{LWin up}{LCtrl up}
-  else if ( A_TimeSincePriorHotkey > 200 )
+    HotkeyTriggered := true
+  }
+  else if ( !HotkeyTriggered )
     send {LWin down}{Left}{LWin up}
+  else if ( HotkeyTriggered )
+    HotkeyTriggered := false
 return
 XButton1 & RButton up::
-  if GetKeyState("LButton","p")
+  if GetKeyState("LButton","p") {
     send {LCtrl down}{LWin down}{Left}{LWin up}{LCtrl up}
-  else if ( A_TimeSincePriorHotkey > 200 )
+    HotkeyTriggered := true
+  }
+  else if ( !HotkeyTriggered )
     send {LWin down}{Right}{LWin up}
+  else if ( HotkeyTriggered )
+    HotkeyTriggered := false
 return
 
 
