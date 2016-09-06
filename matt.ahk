@@ -163,8 +163,5 @@ XButton2 & RButton up::
   send {LCtrl down}{Tab}{LCtrl up}
 return
 XButton2 & MButton::
-  send {LCtrl down}{r}{LCtrl up}
-return
-Numpad9::
   send {LCtrl down}{LShift down}{t}{LShift up}{LCtrl up}
 return
