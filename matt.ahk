@@ -62,7 +62,7 @@ XButton2 & WheelRight::
   send {LAlt down}{Right}{LAlt up}
 return
 
-#ifWinActive, Atom
+#ifWinActive, ahk_exe Atom.exe
 XButton2 & WheelLeft::
   if ( A_TimeSincePriorHotkey > 200 )
   send {LCtrl down}{k}{LCtrl up}
@@ -122,7 +122,7 @@ XButton2 & MButton::
   send {LCtrl down}{LShift down}{t}{LShift up}{LCtrl up}
 return
 
-#ifWinActive, MATLAB
+#ifWinActive, ahk_exe Matlab.exe
 XButton2 & WheelLeft::
   if ( A_TimeSincePriorHotkey > 200 )
   send {LCtrl down}{LShift down}{Tab}{LShift up}{LCtrl up}
@@ -142,7 +142,7 @@ XButton2 & RButton up::
   send {LCtrl down}{PgDn}{LCtrl up}
 return
 
-#ifWinActive, Opera
+#ifWinActive, ahk_exe Opera.exe
 XButton2 & WheelLeft::
   if ( A_TimeSincePriorHotkey > 200 )
   send {LAlt down}{Left}{LAlt up}
