@@ -95,6 +95,29 @@ Numpad9::
   send {LCtrl down}{LShift down}{t}{LShift up}{LCtrl up}
 return
 
+#ifwinActive, Drawboard PDF
+XButton2 & WheelLeft::
+  send {Left}
+return
+XButton2 & WheelUp::
+  send {LCtrl down}{WheelUp}{LCtrl up}
+return
+XButton2 & WheelRight::
+  send {Right}
+return
+XButton2 & WheelDown::
+  send {LCtrl down}{WheelDown}{LCtrl up}
+return
+XButton2 & LButton up::
+  send {LCtrl down}{LShift down}{Tab}{LShift up}{LCtrl up}
+return
+XButton2 & RButton up::
+  send {LCtrl down}{Tab}{LCtrl up}
+return
+XButton2 & MButton::
+  send {Right}{Left}
+return
+
 #ifWinActive, Edge
 XButton2 & WheelUp::
   if ( A_TimeSincePriorHotkey > 200 )
