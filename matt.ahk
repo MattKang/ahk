@@ -32,25 +32,17 @@ XButton1 & WheelDown::
   if ( A_TimeSincePriorHotkey > 200 )
   send {LWin down}{Down}{LWin Up}
 return
+XButton1 & WheelLeft::
+  send {LWin down}{Left}{LWin up}
+return
+XButton1 & WheelRight::
+  send {LWin down}{Right}{LWin up}
+return
 XButton1 & LButton up::
-  if GetKeyState("RButton","p") {
-    send {LCtrl down}{LWin down}{Right}{LWin up}{LCtrl up}
-    HotkeyTriggered := true
-  }
-  else if ( !HotkeyTriggered )
-    send {LWin down}{Left}{LWin up}
-  else if ( HotkeyTriggered )
-    HotkeyTriggered := false
+  send {LCtrl down}{LWin down}{Left}{LWin up}{LCtrl up}
 return
 XButton1 & RButton up::
-  if GetKeyState("LButton","p") {
-    send {LCtrl down}{LWin down}{Left}{LWin up}{LCtrl up}
-    HotkeyTriggered := true
-  }
-  else if ( !HotkeyTriggered )
-    send {LWin down}{Right}{LWin up}
-  else if ( HotkeyTriggered )
-    HotkeyTriggered := false
+  send {LCtrl down}{LWin down}{Right}{LWin up}{LCtrl up}
 return
 
 
