@@ -65,22 +65,17 @@ return
 #ifWinActive, ahk_exe Atom.exe
 XButton2 & WheelLeft::
   if ( A_TimeSincePriorHotkey > 200 )
-  send {LCtrl down}{k}{LCtrl up}
-  send {LCtrl down}{p}{LCtrl up}
+  send {LCtrl down}{k}{p}{LCtrl up}
 return
 XButton2 & WheelUp::
-  if ( A_TimeSincePriorHotkey > 200 )
-  send {LCtrl down}{k}{LCtrl up}
-  send {Right}
+  send {LCtrl down}{WheelUp}{LCtrl up}
 return
 XButton2 & WheelRight::
   if ( A_TimeSincePriorHotkey > 200 )
-  send {LCtrl down}{k}{LCtrl up}
-  send {LCtrl down}{n}{LCtrl up}
+  send {LCtrl down}{k}{n}{LCtrl up}
 return
 XButton2 & WheelDown::
-  if ( A_TimeSincePriorHotkey > 200 )
-  send {LCtrl down}{w}{LCtrl up}
+  send {LCtrl down}{WheelDown}{LCtrl up}
 return
 XButton2 & LButton::
   send {LCtrl down}{PgUp}{LCtrl up}
@@ -89,7 +84,7 @@ XButton2 & RButton up::
   send {LCtrl down}{PgDn}{LCtrl up}
 return
 XButton2 & MButton::
-  send {LCtrl down}{\}{LCtrl up}
+  send {LCtrl down}{0}{LCtrl up}
 return
 Numpad9::
   send {LCtrl down}{LShift down}{t}{LShift up}{LCtrl up}
