@@ -17,6 +17,11 @@ HotkeyTriggered := false ; ensures multiple gestures don't trigger simultaneousl
     Click Middle
 Return
 
+; Delete line
+#Backspace::
+  send {LShift down}{Home}{LShift up}{Backspace}
+return
+
 ; Task View
 XButton1 & XButton2::
 XButton2 & XButton1::
@@ -77,7 +82,7 @@ return
 XButton2 & WheelDown::
   send {LCtrl down}{WheelDown}{LCtrl up}
 return
-XButton2 & LButton::
+XButton2 & LButton up::
   send {LCtrl down}{PgUp}{LCtrl up}
 return
 XButton2 & RButton up::
@@ -130,7 +135,7 @@ XButton2 & WheelRight::
   if ( A_TimeSincePriorHotkey > 200 )
   send {LAlt down}{Right}{LAlt up}
 return
-XButton2 & LButton::
+XButton2 & LButton up::
   send {LCtrl down}{LShift down}{Tab}{LShift up}{LCtrl up}
 return
 XButton2 & RButton up::
@@ -153,7 +158,7 @@ XButton2 & WheelDown::
   if ( A_TimeSincePriorHotkey > 200 )
   send {LCtrl down}{w}{LCtrl up}
 return
-XButton2 & LButton::
+XButton2 & LButton up::
   send {LCtrl down}{PgUp}{LCtrl up}
 return
 XButton2 & RButton up::
@@ -162,7 +167,6 @@ return
 
 #ifWinActive, ahk_exe Opera.exe
 XButton2 & WheelLeft::
-  if ( A_TimeSincePriorHotkey > 200 )
   send {LAlt down}{Left}{LAlt up}
 return
 XButton2 & WheelUp::
@@ -170,14 +174,13 @@ XButton2 & WheelUp::
   send {LCtrl down}{t}{LCtrl up}
 return
 XButton2 & WheelRight::
-  if ( A_TimeSincePriorHotkey > 200 )
   send {LAlt down}{Right}{LAlt up}
 return
 XButton2 & WheelDown::
   if ( A_TimeSincePriorHotkey > 200 )
   send {LCtrl down}{w}{LCtrl up}
 return
-XButton2 & LButton::
+XButton2 & LButton up::
   send {LCtrl down}{LShift down}{Tab}{LShift up}{LCtrl up}
 return
 XButton2 & RButton up::
