@@ -12,11 +12,6 @@ SetTitleMatchMode, 2 ; window string matching, subset
 ; Variables
 HotkeyTriggered := false ; ensures multiple gestures don't trigger simultaneously
 
-; Capture the 3 finger click which is sent to Windows as Left windows + Shift + Ctrl + F22
-#^+F22::
-    Click Middle
-Return
-
 ; Delete line
 #Backspace::
   send {LShift down}{Home}{LShift up}{Backspace}
