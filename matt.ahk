@@ -44,7 +44,9 @@ return
 XButton1 & RButton up::
   send {LCtrl down}{LWin down}{Right}{LWin up}{LCtrl up}
 return
-
+XButton1 & MButton up::
+  Run "C:\Users\mattk\AppData\Local\Mizage LLC\Divvy\Divvy.exe"
+return
 
 ; Application specific
 
