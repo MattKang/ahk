@@ -9,6 +9,9 @@ SetTitleMatchMode, 2 ; window string matching, subset
 #Persistent
 #SingleInstance Force
 
+; Turn NumLock on for Naga
+SetNumLockState, AlwaysOn
+
 ; Variables
 HotkeyTriggered := false ; ensures multiple gestures don't trigger simultaneously
 
