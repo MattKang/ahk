@@ -189,3 +189,28 @@ return
 XButton2 & MButton::
   send {LCtrl down}{LShift down}{t}{LShift up}{LCtrl up}
 return
+
+#ifWinActive, ahk_exe Opera.exe
+Numpad1::
+  send {LAlt down}{Left}{LAlt up}
+return
+Numpad2::
+  if ( A_TimeSincePriorHotkey > 200 )
+  send {LCtrl down}{t}{LCtrl up}
+return
+Numpad3::
+  send {LAlt down}{Right}{LAlt up}
+return
+Numpad5::
+  if ( A_TimeSincePriorHotkey > 200 )
+  send {LCtrl down}{w}{LCtrl up}
+return
+Numpad4::
+  send {LCtrl down}{LShift down}{Tab}{LShift up}{LCtrl up}
+return
+Numpad6::
+  send {LCtrl down}{Tab}{LCtrl up}
+return
+Numpad7::
+  send {LCtrl down}{LShift down}{t}{LShift up}{LCtrl up}
+return
