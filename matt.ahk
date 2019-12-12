@@ -118,54 +118,7 @@ XButton2 & MButton::
   send {Right}{Left}
 return
 
-#ifWinActive, Edge
-XButton2 & WheelUp::
-  if ( A_TimeSincePriorHotkey > 200 )
-  send {LCtrl down}{t}{LCtrl up}
-return
-XButton2 & WheelDown::
-  if ( A_TimeSincePriorHotkey > 200 )
-  send {LCtrl down}{w}{LCtrl up}
-return
-XButton2 & WheelLeft::
-  if ( A_TimeSincePriorHotkey > 200 )
-  send {LAlt down}{Left}{LAlt up}
-return
-XButton2 & WheelRight::
-  if ( A_TimeSincePriorHotkey > 200 )
-  send {LAlt down}{Right}{LAlt up}
-return
-XButton2 & LButton up::
-  send {LCtrl down}{LShift down}{Tab}{LShift up}{LCtrl up}
-return
-XButton2 & RButton up::
-  send {LCtrl down}{Tab}{LCtrl up}
-return
-XButton2 & MButton::
-  send {LCtrl down}{LShift down}{t}{LShift up}{LCtrl up}
-return
-
-#ifWinActive, ahk_exe Matlab.exe
-XButton2 & WheelLeft::
-  if ( A_TimeSincePriorHotkey > 200 )
-  send {LCtrl down}{LShift down}{Tab}{LShift up}{LCtrl up}
-return
-XButton2 & WheelRight::
-  if ( A_TimeSincePriorHotkey > 200 )
-  send {LCtrl down}{Tab}{LCtrl up}
-return
-XButton2 & WheelDown::
-  if ( A_TimeSincePriorHotkey > 200 )
-  send {LCtrl down}{w}{LCtrl up}
-return
-XButton2 & LButton up::
-  send {LCtrl down}{PgUp}{LCtrl up}
-return
-XButton2 & RButton up::
-  send {LCtrl down}{PgDn}{LCtrl up}
-return
-
-#ifWinActive, ahk_exe Opera.exe
+#if WinActive("ahk_exe Edge.exe") || WinActive("ahk_exe Firefox.exe") || WinActive("ahk_exe Opera.exe")
 XButton2 & WheelLeft::
   send {LAlt down}{Left}{LAlt up}
 return
@@ -189,8 +142,7 @@ return
 XButton2 & MButton::
   send {LCtrl down}{LShift down}{t}{LShift up}{LCtrl up}
 return
-
-#ifWinActive, ahk_exe Opera.exe
+; Numpad/Naga shortcuts
 Numpad1::
   send {LAlt down}{Left}{LAlt up}
 return
@@ -213,4 +165,24 @@ Numpad6::
 return
 Numpad7::
   send {LCtrl down}{LShift down}{t}{LShift up}{LCtrl up}
+return
+
+#ifWinActive, ahk_exe Matlab.exe
+XButton2 & WheelLeft::
+  if ( A_TimeSincePriorHotkey > 200 )
+  send {LCtrl down}{LShift down}{Tab}{LShift up}{LCtrl up}
+return
+XButton2 & WheelRight::
+  if ( A_TimeSincePriorHotkey > 200 )
+  send {LCtrl down}{Tab}{LCtrl up}
+return
+XButton2 & WheelDown::
+  if ( A_TimeSincePriorHotkey > 200 )
+  send {LCtrl down}{w}{LCtrl up}
+return
+XButton2 & LButton up::
+  send {LCtrl down}{PgUp}{LCtrl up}
+return
+XButton2 & RButton up::
+  send {LCtrl down}{PgDn}{LCtrl up}
 return
