@@ -186,3 +186,12 @@ return
 XButton2 & RButton up::
   send {LCtrl down}{PgDn}{LCtrl up}
 return
+
+#ifWinActive, ahk_exe X2.exe
+XButton2 & WheelUp::
+  send {LCtrl down}{WheelUp}{LCtrl up}
+return
+XButton2 & WheelDown::
+  send {LCtrl down}{WheelDown}{LCtrl up}
+return
+
