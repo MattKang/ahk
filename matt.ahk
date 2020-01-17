@@ -118,7 +118,7 @@ XButton2 & MButton::
   send {Right}{Left}
 return
 
-#if WinActive("Microsoft Edge ahk_exe ApplicationFrameHost.exe") || WinActive("ahk_exe Firefox.exe") || WinActive("ahk_exe Opera.exe")
+#if WinActive("ahk_exe msedge.exe") || WinActive("ahk_exe Firefox.exe") || WinActive("ahk_exe Opera.exe")
 XButton2 & WheelLeft::
   send {LAlt down}{Left}{LAlt up}
 return
